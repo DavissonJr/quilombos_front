@@ -1,0 +1,19 @@
+.custom-navbar{
+  background: linear-gradient(90deg,#1f6b3c,#2d8a4f);
+  padding: 14px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.navbar-brand{
+  font-size: 22px;
+  letter-spacing:1px;
+}
+
+.nav-link{
+  font-weight:500;
+  transition:0.2s;
+}
+
+.nav-link:hover{
+  color:#ffd65c !important;
+}
