@@ -1,53 +1,112 @@
-.hero-section{
-  height:100vh;
-  background-image:url('/assets/quilombo-banner.jpg');
-  background-size:cover;
-  background-position:center;
-  position:relative;
-  padding-top:80px;
+.hero-section {
+  min-height: 100vh;
+  background-image: url('/assets/quilombo-banner.png');
+  background-size: cover;
+
+  background-position: center 30%; /* desce a imagem */
+
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 100px;
+
+  display: flex;
+  align-items: center;
 }
 
-.hero-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.6)
+/* overlay mais bonito */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.75)
   );
 }
 
-.hero-content{
-  position:relative;
-  color:white;
+/* conteúdo */
+.hero-content {
+  position: relative;
+  color: white;
+  animation: fadeUp 1s ease;
 }
 
-.hero-title{
-  font-size:56px;
-  font-weight:800;
-  text-transform:uppercase;
+/* título */
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
 }
 
-.hero-subtitle{
-  font-size:22px;
-  margin-top:15px;
-  color:#ffd65c;
+/* subtítulo */
+.hero-subtitle {
+  font-size: 22px;
+  margin-top: 15px;
+  color: #ffd65c;
 }
 
-.hero-locations{
-  margin-top:10px;
-  font-weight:500;
-  letter-spacing:1px;
+/* locais */
+.hero-locations {
+  margin-top: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
-.hero-btn{
-  margin-top:25px;
-  font-weight:bold;
-  padding:12px 28px;
-  border-radius:6px;
-  transition:0.2s;
+/* botão moderno */
+.hero-btn {
+  margin-top: 30px;
+  font-weight: bold;
+  padding: 14px 32px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-.hero-btn:hover{
-  transform:translateY(-2px);
+.hero-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* animação suave */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* tablet */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-section {
+    background-position: center 20%;
+  }
+}
+
+/* celular */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-section {
+    padding-top: 80px;
+    background-position: center 15%;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
 }
