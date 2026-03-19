@@ -16,20 +16,20 @@ export class QuilombosComponent {
       nome: 'Riacho dos Porcos',
       descricao:
         'Comunidade marcada pela resistência e preservação cultural no sertão.',
-      imagem: 'assets/riacho.jpg',
+      imagem: 'assets/riacho.png',
       rota: '/quilombos/riacho',
     },
     {
       nome: 'Severo',
       descricao:
         'História de luta e identidade construída ao longo de gerações.',
-      imagem: 'assets/severo.jpg',
+      imagem: 'assets/severo.png',
       rota: '/quilombos/severo',
     },
     {
       nome: 'Buenos Aires',
       descricao: 'Tradições vivas e conexão forte com suas raízes ancestrais.',
-      imagem: 'assets/buenos.jpg',
+      imagem: 'assets/bueno.png',
       rota: '/quilombos/buenos',
     },
   ];
